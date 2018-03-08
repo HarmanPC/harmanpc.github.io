@@ -1,12 +1,13 @@
+<h1><center>Gambling</center></h1>
 <p id="game"></p>
 <script>
-  var thing = ["one","two","three"];
-  var rand1 = thing[Math.floor(Math.random() * thing.length)];
-  var rand2 = thing[Math.floor(Math.random() * thing.length)];
-  var rand3 = thing[Math.floor(Math.random() * thing.length)];
-  var output = `<center><h1>[${rand1}][${rand2}][${rand3}]</h1></center>`
+  var thing = ["<a style="color:red">one</a>","<a style="color:blue">two</a>","<a style="color:yellow">three</a>"];
+  var rand1 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
+  var rand2 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
+  var rand3 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
+  var output = `<center><h1>${rand1}${rand2}${rand3}</h1></center>`
   if (rand1 === rand2 && rand2 === rand3 && rand3 === rand1) {
-    output += "<p>You win!</p>";
+    output += "<h4 style="color:green">You win!</h4>";
   }
   document.getElementById("game").innerHTML = output;
 </script>
