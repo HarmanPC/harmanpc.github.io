@@ -5,6 +5,8 @@
   var rand2 = thing[Math.floor(Math.random() * thing.length)];
   var rand3 = thing[Math.floor(Math.random() * thing.length)];
   var output = `<center><h1>[${rand1}][${rand2}][${rand3}]</h1></center>`
-  if (rand1 === rand2 && rand2 === rand3 && rand3 === rand1) return output+="<p>You win!</p>";
+  if (rand1 === rand2 && rand2 === rand3 && rand3 === rand1) {
+    output += "<p>You win!</p>";
+  }
   document.getElementById("game").innerHTML = output;
 </script>
