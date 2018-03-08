@@ -1,11 +1,10 @@
 <p id="game"></p>
-<h1>ok</h1>
 <script>
   var thing = ["one","two","three"];
   var rand1 = thing[Math.floor(Math.random() * thing.length) + 1];
   var rand2 = thing[Math.floor(Math.random() * thing.length) + 1];
   var rand3 = thing[Math.floor(Math.random() * thing.length) + 1];
   var output = `<center><h1>[${rand1}][${rand2}][${rand3}]</h1></center>`
-  if (rand1 == rand2 && rand2 == rand3 && rand3 == rand1) return output+="<br><h1>You win!</h1>";
+ // if (rand1 == rand2 && rand2 == rand3 && rand3 == rand1) return output+="<br><h1>You win!</h1>";
   document.getElementById("game").innerHTML = rand1;
 </script>
