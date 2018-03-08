@@ -2,8 +2,9 @@
 <form action="https://github.com/HarmanPC/harmanpc.github.io/master/index.txt">
 First name: <input type="text" name="FirstName" value=""><br>
 Last name: <input type="text" name="LastName" value=""><br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" onclick="document.getElementById('ok1').innerHTML = FirstName">;
 </form>
 <script>
   document.getElementById("ok").innerHTML = FirstName;
 </script>
+<p id="ok1"></p>
