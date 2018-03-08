@@ -1,4 +1,6 @@
 <script>
  global.fs = require("fs");
-  fs.writeFile('index.txt','test');
+  document.getElementById('test').innerHTML = fs.readFileSync('index.txt');
 </script>
+<button onclick="document.getElementById('ok').innerHTML = fs.writeFile('t.txt','test');">test</button>
+<p id="test"></p>
