@@ -1,13 +1,25 @@
-<h1><center>Gambling</center></h1>
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 title="Gambling"><center>Gambling</center></h1>
 <p id="game"></p>
 <script>
-  var thing = ["<a style="color:red">one</a>","<a style="color:blue">two</a>","<a style="color:yellow">three</a>"];
-  var rand1 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
-  var rand2 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
-  var rand3 = '[' + thing[Math.floor(Math.random() * thing.length)] + ']';
-  var output = `<center><h1>${rand1}${rand2}${rand3}</h1></center>`
+  var thing = ['<div class="fa fa-book" style="color:blue"></div>','<div class="fa fa-heart" style="color:red"></div>','<div class="fa fa-pencil" style="color:gray"></div>'];
+  
+  var rand1 = thing[Math.floor(Math.random() * thing.length)];
+  var rand2 = thing[Math.floor(Math.random() * thing.length)];
+  var rand3 = thing[Math.floor(Math.random() * thing.length)];
+  
+  var result = `<center><h1>${rand1} | ${rand2} | ${rand3}</h1></center>`;
+  
+  let text = '';
   if (rand1 === rand2 && rand2 === rand3 && rand3 === rand1) {
-    output += "<h4 style="color:green">You win!</h4>";
+      text ='<div style="font-size:30px; color:green">You win!</div>';
   }
+  
+  var output = result + text;
   document.getElementById("game").innerHTML = output;
 </script>
+<a target="_blank" href="https://harmanpc.github.io/"><button><b>Replay <p class="fa fa-refresh"></p></b></button></a>
+</html>
