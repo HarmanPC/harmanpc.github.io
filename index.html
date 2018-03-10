@@ -9,13 +9,13 @@
   </script>
   <script>
     var rand = words[Math.floor(Math.random() * words.length)];
-    var split = rand.split('');
-    var joined = Math.floor(Math.random() * split.length);
-    var output = joined.join(', ');
+    var split = rand.split(', ');
+    //var joined = Math.floor(Math.random() * split.length);
+   // var output = joined.join(', ');
     document.getElementById("jumble").innerHTML = rand;
-    document.getElementById("jumble2").innerHTML = joined;
+    //document.getElementById("jumble2").innerHTML = joined;
     document.getElementById("jumble3").innerHTML = split;
-    document.getElementById("jumble4").innerHTML = output;
+    //document.getElementById("jumble4").innerHTML = output;
   </script>
 <input>
 </input>
