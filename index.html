@@ -6,16 +6,16 @@
   <script src="words.js"></script>
   </script>
   <script>
-    var rand = words[Math.floor(Math.random() * words.length)];
+    var rand = words[Math.floor(Math.random() * words.length)].split("").join(', ');
 	  let i = rand.length;
 	    while (i) {
 		    let j = Math.floor(Math.random() * i);
-		    let t = array[--i];
-		    array[i] = array[j];
-		    array[j] = t;
+		    let t = rand[--i];
+		    rand[i] = rand[j];
+		    rand[j] = t;
 	    }
 	    return rand;
-    var output = rand.split("").join(", "); //+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
+    var output = rand//+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
     document.getElementById("jumble").innerHTML = rand;
     document.getElementById("jumble3").innerHTML = output;
   </script>
