@@ -10,4 +10,11 @@
 <button onclick="document.location.reload()"><b>Replay <p class="fa fa-refresh"></p></b></button>
 </html>
   <summary>Gambling</summary>
- </details
+</details>
+<h1>Jumble Words</h1>
+<p id="jumble"></p>
+<script>
+  var word = require('words.js');
+  var output = word[Math.floor(Math.random() * word.words.length)];
+  document.getElementById("jumble").innerHTML = output;
+</script>
