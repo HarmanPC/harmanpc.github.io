@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<details>
-<h1 title="Gambling"><center>Gambling</center></h1>
-<p id="game"></p>
-<script src="/gambling.js" >
-</script>
-<button onclick="document.location.reload()"><b>Replay <p class="fa fa-refresh"></p></b></button>
-  <summary>Gambling</summary>
-</details>
 <h1>Jumble Words</h1>
 <p id="jumble"></p>
   <script src="words.js"></script>
   </script>
   <script>
-    var output = words[0];
-    document.getElementById("jumble").innerHTML = output;
+    var rand = words[Math.floor(Math.random() * words.length)];
+    document.getElementById("jumble").innerHTML = rand;
   </script>
 </html>
