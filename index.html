@@ -8,9 +8,19 @@
   <script src="words.js"></script>
   </script>
   <script>
+    function shuffle(array) {
+        let i = array.length;
+	    while (i) {
+		    let j = Math.floor(Math.random() * i);
+		    let t = array[--i];
+		    array[i] = array[j];
+		    array[j] = t;
+	    }
+	    return array;
+    },
     var rand = words[Math.floor(Math.random() * words.length)];
     var split = rand.split('');
-    var output = Math.floor(Math.random() * split.length);
+    var output = shuffle(rand.replace(/\W/g, "").toLowerCase().split("")).join(", ") + " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
     document.getElementById("jumble").innerHTML = rand;
     document.getElementById("jumble3").innerHTML = output;
   </script>
