@@ -19,7 +19,6 @@
 	    return array;
     },
     var rand = words[Math.floor(Math.random() * words.length)];
-    var split = rand.split('');
     var output = shuffle(rand.replace(/\W/g, "").toLowerCase().split("")).join(", ") + " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
     document.getElementById("jumble").innerHTML = rand;
     document.getElementById("jumble3").innerHTML = output;
