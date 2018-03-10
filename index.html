@@ -6,6 +6,11 @@
   </script>
   <script>
     var rand = words[Math.floor(Math.random() * words.length)];
-    document.getElementById("jumble").innerHTML = rand;
+    var split = rand.split('');
+    var joined = Math.floor(Math.random() * split.length);
+    var output = joined.join(', ');
+    document.getElementById("jumble").innerHTML = output + ' ' + rand;
   </script>
+<input>
+</input>
 </html>
