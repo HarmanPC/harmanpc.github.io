@@ -2,6 +2,9 @@
 <html>
 <h1>Jumble Words</h1>
 <p id="jumble"></p>
+<p id="jumble2"></p>
+  <p id="jumble3"></p>
+  <p id="jumble4"></p>
   <script src="words.js"></script>
   </script>
   <script>
@@ -9,7 +12,10 @@
     var split = rand.split('');
     var joined = Math.floor(Math.random() * split.length);
     var output = joined.join(', ');
-    document.getElementById("jumble").innerHTML = output + ' ' + rand;
+    document.getElementById("jumble").innerHTML = rand;
+    document.getElementById("jumble2").innerHTML = joined;
+    document.getElementById("jumble3").innerHTML = split;
+    document.getElementById("jumble4").innerHTML = output;
   </script>
 <input>
 </input>
