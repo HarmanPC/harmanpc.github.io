@@ -6,17 +6,15 @@
   <script src="words.js"></script>
   </script>
   <script>
-   /* function shuffle(array) {
-        let i = array.length;
+    var rand = words[Math.floor(Math.random() * words.length)];
+	  let i = rand.length;
 	    while (i) {
 		    let j = Math.floor(Math.random() * i);
 		    let t = array[--i];
 		    array[i] = array[j];
 		    array[j] = t;
 	    }
-	    return array;
-    },*/
-    var rand = words[Math.floor(Math.random() * words.length)];
+	    return rand;
     var output = rand.split("").join(", "); //+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
     document.getElementById("jumble").innerHTML = rand;
     document.getElementById("jumble3").innerHTML = output;
