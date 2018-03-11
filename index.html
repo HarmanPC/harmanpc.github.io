@@ -17,11 +17,12 @@
 	<input  type="submit">
 <p id="ok"></p>
 <script>
-	if (document.getElementById("answer").value.toLowerCase() === original.toLowerCase()) {
+	let data = document.getElementById("answer").value.toLowerCase();
+	if (data === original.toLowerCase()) {
 		document.getElementById("ok").innerHTML = "You win";
 	}
 	else {
-		document.getElementById("ok").innerHTML = "Wrong";
+		document.getElementById("ok").innerHTML = data;
 	}
 </script>
 </html>
