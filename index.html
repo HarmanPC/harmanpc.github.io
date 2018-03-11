@@ -30,11 +30,13 @@
   answer = document.getElementById("answer");
   }
   function checkAnswer() {
+	  var result = document.getElementById("ok");
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
-	document.getElementById("").innerHTML = "You win";
+		result.style.color = "green";
+		result.innerHTML = "You win";
 	} else {
-    	document.getElementById("ok").style.color = "red";
-	document.getElementById("ok").innerHTML = "Wrong.";
+    		result.style.color = "red";
+		result.innerHTML = "Wrong.";
     }
   }
 </script>
