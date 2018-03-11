@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html title="Jumble words game">
+	<p id="jumble"></p>
+	<p id="jumble2"></p>
 <h1>Jumble Words</h1>
-	<script src="jumblewords.js">
-	</script>
-<script>
+	<script>
+	function shuffle(array) {
+ 		var currentIndex = array.length; var temporaryValue; var randomIndex;
+
+		while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
+	var original = words[Math.floor(Math.random() * words.length)];
+	var word = original.split('');
+
+	var output = shuffle(word).join(', ');
+
+	document.getElementById("jumble").innerHTML = original;
+	document.getElementById("jumble2").innerHTML = output;
   var answer;
   function onLoad() {
-  ans = document.getElementById("answer");
+  answer = document.getElementById("answer");
   }
   function checkAnser() {
-	if (ans.value.toLowerCase() === rand.toLowercase()) {
+	if (answer.value.toLowerCase() === original.toLowercase()) {
 	document.getElementById("ok").innerHTML = "You win";
 	} else {
-    document.getElementById("ok").innerHTML = "Wrong";
+    	document.getElementById("ok").innerHTML = "Wrong";
     }
   }
 </script>
