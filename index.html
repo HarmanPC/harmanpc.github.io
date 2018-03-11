@@ -5,24 +5,11 @@
   <script src="words.js">
   </script>
   
-  <script>
-	var original = words[Math.floor(Math.random() * words.length)];
-	var word = original.split('').join(', ');
-    
-	var output = word;
-    document.getElementById("jumble").innerHTML = original;
-    document.getElementById("jumble2").innerHTML = output;
+  <script src="jumblewords.js">
   </script>
 	Enter answer: <input id="answer" type="text">
 	<input  type="submit">
 <p id="ok"></p>
-<script>
-	let data = document.getElementById("answer").value.toLowerCase();
-	if (data === original.toLowerCase()) {
-		document.getElementById("ok").innerHTML = "You win";
-	}
-	else {
-		document.getElementById("ok").innerHTML = data;
-	}
+<script src="results.js">
 </script>
 </html>
