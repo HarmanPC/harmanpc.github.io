@@ -14,7 +14,6 @@
 		    rand[i] = rand[j];
 		    rand[j] = t;
 	    }
-	    return rand;
     var output = rand//+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
     document.getElementById("jumble").innerHTML = rand;
     document.getElementById("jumble3").innerHTML = output;
