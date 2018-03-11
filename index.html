@@ -15,18 +15,20 @@
 		    rand[i] = rand[j];
 		    rand[j] = t;
 	    }
-    var output = rand//+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
+    var output = rand;
     document.getElementById("jumble").innerHTML = ori;
-    document.getElementById("jumble3").innerHTML = output;
+    document.getElementById("jumble2").innerHTML = output;
   </script>
 Enter answer: <input id="answer" type="text">
 <input  type="submit">
+<p id="ok"></p>
 <script>
-	if (document.getElementById('answer') === 'ori') {
-		output+=" You win";
+
+	if (document.getElementById("answer").value.toLowerCase() === ori.toLowerCase()) {
+		document.getElementById("ok").innerHTML = "You win";
 	}
 	else {
-		output+="Wrong";
+		document.getElementById("ok").innerHTML = "Wrong";
 	}
 </script>
 </html>
