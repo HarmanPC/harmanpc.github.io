@@ -6,23 +6,22 @@
   </script>
   
   <script>
-   var original = words[Math.floor(Math.random() * words.length)];
-   
+	var original = words[Math.floor(Math.random() * words.length)];
 	var word = original.split('').join(', ');
     
-    var output = word;
+	var output = word;
     document.getElementById("jumble").innerHTML = original;
     document.getElementById("jumble2").innerHTML = output;
   </script>
 	Enter answer: <input id="answer" type="text">
-	<input  type="submit">  
+	<input  type="submit">
 <p id="ok"></p>
 <script>
 	if (document.getElementById("answer").value.toLowerCase() === original.toLowerCase()) {
 		document.getElementById("ok").innerHTML = "You win";
 	}
-    else {
-    document.getElementById("ok").innerHTML = "Wrong";
-    }
+	else {
+		document.getElementById("ok").innerHTML = "Wrong";
+	}
 </script>
 </html>
