@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html title="Jumble words game">
+	<h1>Jumble Words</h1>
 	<p id="jumble"></p>
 	<p id="jumble2"></p>
-<h1>Jumble Words</h1>
+
 	<script src="words.js">
 	</script>
 	<script>
@@ -31,7 +32,7 @@
   answer = document.getElementById("answer");
   }
   function checkAnswer() {
-	if (answer.value.toLowerCase() === original.toLowercase()) {
+	if (answer.value.toLowerCase() === original.toLowerCase()) {
 	document.getElementById("ok").innerHTML = "You win";
 	} else {
     	document.getElementById("ok").innerHTML = "Wrong";
