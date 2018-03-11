@@ -6,7 +6,8 @@
   <script src="words.js"></script>
   </script>
   <script>
-    var rand = words[Math.floor(Math.random() * words.length)].split("").join(', ');
+   var rand = words[Math.floor(Math.random() * words.length)].split("").join(', ');
+	var ori = rand;
 	  let i = rand.length;
 	    while (i) {
 		    let j = Math.floor(Math.random() * i);
@@ -15,7 +16,7 @@
 		    rand[j] = t;
 	    }
     var output = rand//+ " [" + words[rand] + (rand.match(/\W/g) ? ", " + (rand.match(/\W/g).length + 1) + " words" : "") + "]";
-    document.getElementById("jumble").innerHTML = rand;
+    document.getElementById("jumble").innerHTML = ori;
     document.getElementById("jumble3").innerHTML = output;
   </script>
 <input>
