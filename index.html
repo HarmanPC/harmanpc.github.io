@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html title="Jumble words game">
 <h1>Jumble Words</h1>
-<p id="jumble"></p>
-  <p id="jumble2"></p>
-  <script src="words.js">
-  </script>
-  
-  <script src="jumblewords.js">
-  </script>
-	Enter answer: <input id="answer" type="text">
-	<input  type="submit">
-<p id="ok"></p>
-<script src="results.js">
+	<script src="jumblewords.js">
+	</script>
+<script>
+  var answer;
+  function onLoad() {
+  ans = document.getElementById("answer");
+  }
+  function checkAnser() {
+	if (ans.value.toLowerCase() === rand.toLowercase()) {
+	document.getElementById("ok").innerHTML = "You win";
+	} else {
+    document.getElementById("ok").innerHTML = "Wrong";
+    }
+  }
 </script>
-</html>
+<body onload = "onLoad();">
+Enter answer: <input type="text" name="enter" class="enter" value="" id="answer" type="text">
+<input type="button" value="Submit" onclick="checkAns();">  
+<p id="ok"></p>
+</body>
