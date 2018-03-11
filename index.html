@@ -30,7 +30,7 @@
   function onLoad() {
   answer = document.getElementById("answer");
   }
-  function checkAnser() {
+  function checkAnswer() {
 	if (answer.value.toLowerCase() === original.toLowercase()) {
 	document.getElementById("ok").innerHTML = "You win";
 	} else {
@@ -40,6 +40,6 @@
 </script>
 <body onload = "onLoad();">
 Enter answer: <input type="text" name="enter" class="enter" value="" id="answer" type="text">
-<input type="button" value="Submit" onclick="checkAns();">  
+<input type="button" value="Submit" onclick="checkAnswer();">  
 <p id="ok"></p>
 </body>
