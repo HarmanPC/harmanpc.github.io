@@ -6,8 +6,8 @@
   <script src="words.js"></script>
   </script>
   <script>
-   var rand = words[Math.floor(Math.random() * words.length)].split("").join(', ');
-	var ori = rand;
+   var ori = words[Math.floor(Math.random() * words.length)];
+	var rand = ori.split("").join(', ');
 	  let i = rand.length;
 	    while (i) {
 		    let j = Math.floor(Math.random() * i);
