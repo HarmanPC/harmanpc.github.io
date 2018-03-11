@@ -33,7 +33,7 @@
 	  var result = document.getElementById("ok");
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
 		result.style.color = "green";
-		result.innerHTML = "You win";
+		result.innerHTML = "You win!";
 	} else {
     		result.style.color = "red";
 		result.innerHTML = "Wrong.";
@@ -43,6 +43,6 @@
 <body onload = "onLoad();">
 Enter answer: <input type="text" name="enter" class="enter" value="" id="answer" type="text">
 <input type="button" value="Submit" onclick="checkAnswer();">  
-<p id="ok"></p>
+<p id="ok" style="font-size:30px"></p>
 	<button onclick="document.location.reload()"><b>New word</b></button>
 </body>
