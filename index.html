@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
-<h1>Jumble Words</h1>
 <p id="jumble"></p>
-  <p id="jumble3"></p>
-  <script src="words.js"></script>
-	</script>
-
- <script>
+  <p id="jumble2"></p>
+  <script src="words.js">
+  </script>
+  
+  <script>
    var original = words[Math.floor(Math.random() * words.length)];
    
-	var word = original.split("").join(', ');
+	var word = original.split('').join(', ');
     
     var output = word;
     document.getElementById("jumble").innerHTML = original;
     document.getElementById("jumble2").innerHTML = output;
   </script>
-  
 	Enter answer: <input id="answer" type="text">
-	<input  type="submit">
-    
+	<input  type="submit">  
 <p id="ok"></p>
-
 <script>
 	if (document.getElementById("answer").value.toLowerCase() === original.toLowerCase()) {
 		document.getElementById("ok").innerHTML = "You win";
@@ -29,5 +25,4 @@
     document.getElementById("ok").innerHTML = "Wrong";
     }
 </script>
-
 </html>
