@@ -4,31 +4,30 @@
 <p id="jumble"></p>
   <p id="jumble3"></p>
   <script src="words.js"></script>
-  </script>
-  <script>
-   var ori = words[Math.floor(Math.random() * words.length)];
-	var rand = ori.split("").join(', ');
-	  let i = rand.length;
-	    while (i) {
-		    let j = Math.floor(Math.random() * i);
-		    let t = rand[--i];
-		    rand[i] = rand[j];
-		    rand[j] = t;
-	    }
-    var output = rand;
-    document.getElementById("jumble").innerHTML = ori;
+	</script>
+
+ <script>
+   var original = words[Math.floor(Math.random() * words.length)];
+   
+	var word = original.split("").join(', ');
+    
+    var output = word;
+    document.getElementById("jumble").innerHTML = original;
     document.getElementById("jumble2").innerHTML = output;
   </script>
-Enter answer: <input id="answer" type="text">
-<input  type="submit">
+  
+	Enter answer: <input id="answer" type="text">
+	<input  type="submit">
+    
 <p id="ok"></p>
-<script>
 
-	if (document.getElementById("answer").value.toLowerCase() === ori.toLowerCase()) {
+<script>
+	if (document.getElementById("answer").value.toLowerCase() === original.toLowerCase()) {
 		document.getElementById("ok").innerHTML = "You win";
 	}
-	else {
-		document.getElementById("ok").innerHTML = "Wrong";
-	}
+    else {
+    document.getElementById("ok").innerHTML = "Wrong";
+    }
 </script>
+
 </html>
