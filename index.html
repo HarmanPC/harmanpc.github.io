@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html style="color:cyan; background:#000000" "title="Jumble words game">
-	<center><h1 style="color:red">Jumble Words</h1></center><br>
+	<center><u><h1 style="color:red">Jumble Words</h1></u></center><br>
 	<p><b>Word: </b><a id="jumble"></a></p>
 
 	<script src="words.js">
 	</script>
 	<script>
 	function shuffle(array) {
- 		var currentIndex = array.length; var temporaryValue; var randomIndex;
+ 		var currentIndex = array.length; 
+		var temporaryValue; 
+		var randomIndex;
 
 		while (0 !== currentIndex) {
                 randomIndex = Math.floor(Math.random() * currentIndex);
@@ -43,6 +45,6 @@
 <body onload = "onLoad();">
 Enter answer: <input type="text" name="enter" class="enter" value="" id="answer" type="text">
 <input type="button" value="Submit" onclick="checkAnswer();">  
-<p id="ok" style="font-size:23px"></p>
-	<button onclick="document.location.reload()"><b>New word</b></button>
+	<p id="ok" style="font-size:23px"><b></b></p>
+	<button style="color:cyan" onclick="document.location.reload()"><b>New word</b></button>
 </body>
