@@ -1,6 +1,6 @@
 const loc = document.location;
 function onId(id) {
-  return document.getElementById("id");
+  return document.getElementById(id);
 }
 function write(id, message) {
   if (!id || !message) return;
