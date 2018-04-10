@@ -1,3 +1,5 @@
+style("div").color = "cyan";
+style("div).background = "#000000";
 function shuffle(array) {
 	if (!Array.isArray(array)) return;
  	let currentIndex = array.length; 
@@ -23,8 +25,8 @@ write("jumble", output);
 var answer;
 function onLoad() {
   answer = id("answer");
- }
-  function checkAnswer() {
+}
+function checkAnswer() {
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
 		style("result").color = "green";
 		write("result", "You win!");
