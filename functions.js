@@ -1,5 +1,6 @@
 style("div").color = "cyan";
 style("div").background = "#000000";
+
 function shuffle(array) {
 	if (!Array.isArray(array)) return;
  	let currentIndex = array.length; 
@@ -18,13 +19,12 @@ function shuffle(array) {
 }
 const original = words[Math.floor(Math.random() * words.length)];
 var word = original.split('');
-
 var output = shuffle(word).join(', ');
 
 write("jumble", output);
 var answer;
 function onLoad() {
-  answer = id("answer");
+  answer = onId("answer");
 }
 function checkAnswer() {
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
