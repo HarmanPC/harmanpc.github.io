@@ -31,7 +31,7 @@ function shuffle(array) {
 	}
 	return array;
 }
-const original = words[Math.floor(Math.random() * words.length)];
+var original = words[Math.floor(Math.random() * words.length)];
 var word = original.split('');
 var output = shuffle(word).join(', ');
 
