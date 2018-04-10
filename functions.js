@@ -14,7 +14,7 @@ function shuffle(array) {
 	}
 	return array;
 }
-var original = words[Math.floor(Math.random() * words.length)];
+const original = words[Math.floor(Math.random() * words.length)];
 var word = original.split('');
 
 var output = shuffle(word).join(', ');
@@ -22,15 +22,14 @@ var output = shuffle(word).join(', ');
 write("jumble", output);
 var answer;
 function onLoad() {
-  answer = document.getElementById("answer");
-  }
+  answer = id("answer");
+ }
   function checkAnswer() {
-	var result = id("result");
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
-		result.style.color = "green";
+		style("result").color = "green";
 		write("result", "You win!");
 	} else {
-    		result.style.color = "red";
+    		style("result").color = "red";
 		write("result", "Wrong.");
 	}
 }
