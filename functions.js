@@ -1,5 +1,5 @@
 style("div").color = "cyan";
-style("div).background = "#000000";
+style("div").background = "#000000";
 function shuffle(array) {
 	if (!Array.isArray(array)) return;
  	let currentIndex = array.length; 
