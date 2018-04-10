@@ -3,7 +3,7 @@ function id(id) {
   return document.getElementById("id");
 }
 function write(id, message) {
-  if (!id || !message || !typeof message !== "string") return;
+  if (!id || !message) return;
   id(id).innerHTML = message;
 }
 function style(id) {
