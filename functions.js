@@ -1,5 +1,7 @@
-style("div").color = "cyan";
-style("div").background = "#000000";
+style("title").color = "cyan";
+style("title").background = "#000000";
+style("h1").color = "red";
+style("button").background = "cyan";
 
 function shuffle(array) {
 	if (!Array.isArray(array)) return;
