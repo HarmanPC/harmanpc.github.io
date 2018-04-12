@@ -2,12 +2,12 @@
 <html id="title" title="Jumble words game">
 <center><u><h1 id="h1">Jumble Words</h1></u></center><br>
 <p><b>Word: </b><a id="jumble"></a></p>
-<script src="index.js"></script>
 <script src="words.js"></script>
+<script src="stuff.js"></script>
 <body onload = "onLoad();">
 
-Enter answer: <input type="text" name="enter" class="enter" value="" id="answer" type="text">
+Enter answer: <input name="enter" class="enter" value="" id="answer" type="text">
 <input style="background:cyan;font-weight:bold" type="button" value="Submit" onclick="checkAnswer();">
 	<b><p id="result" style="font-size:23px"></p></b>
-	<button id="button" onclick="loc.reload()"><b>New word</b></button>
+	<button style="background:cyan" onclick="loc.reload()"><b>New word</b></button>
 </body>
