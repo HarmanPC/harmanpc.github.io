@@ -13,12 +13,11 @@ function style(id) {
 style("title").color = "cyan";
 style("title").background = "#000000";
 style("h1").color = "red";
-style("button").background = "cyan";
 
 function shuffle(array) {
 	if (!Array.isArray(array)) return;
  	let currentIndex = array.length; 
-	let temporaryValue; 
+	let temporaryValue;
 	let randomIndex;
 
 	while (0 !== currentIndex) {
@@ -42,7 +41,7 @@ function onLoad() {
 }
 function checkAnswer() {
 	if (answer.value.toLowerCase() === original.toLowerCase()) {
-		style("result").color = "green";
+		style("result").color = "lightgreen";
 		write("result", "You win!");
 	} else {
     		style("result").color = "red";
