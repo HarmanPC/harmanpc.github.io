@@ -1,22 +1,81 @@
+
+Google+
+Calendar
+Web
+more
+An amazing sketch.
+H
+Harman Singh
+<!DOCTYPE html> <html> <head> <title>P5.js Test</title> <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.4/p5.min.js"></script> <scrip...
+H
+Harman Singh
+to me
+6 hours agoDetails
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
- 
-<style>
-body {
-        background-image: url("http://www.nerdgoblin.com/wp-content/uploads/2015/06/dnd5e-interior-art.jpg");
-height: 100%;
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+<title>P5.js Test</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.4/p5.min.js"></script>
+<script>
+var bubbles = [];
+var lines = [];
+var lines2 = [];
+var lines3 = [];
+var lines4 = [];
+function setup() {
+    createCanvas(500, 500);
+    background(51);
 }
-</style>
- 
+function draw() {
+    for (var i = 0; i < 25; i++) {
+        for (var x = 0; x < height;  x += 25) {
+            if (x == height || x == 0) continue;
+            lines.push(new Line(x, width/2, 0, 0));
+            lines[i].show();
+            lines2.push(new Line(x, width/2, 0, height));
+            lines2[i].show();
+            lines3.push(new Line(x, width/2, height, height));
+            lines3[i].show();
+            lines4.push(new Line(x, width/2, height, 0));
+            lines4[i].show();
+            stroke(51);
+            bubbles.push(new Bubble(x, width / 2, 25, 25));
+            bubbles[i].show();
+
+            /*stroke(random(255), random(255), random(255));
+            line(width/2, 0, width/2, width);*/
+            frameRate(4);
+        }
+    }
+}
+class Line {
+    constructor(x, y, x2, y2) {
+        this.x = x;
+        this.y = y;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+    show() {
+        stroke(random(255), random(255), random(255));
+        line(this.x, this.y, this.x2, this.y2);
+    }
+}
+class Bubble {
+    constructor(x, y, a, b) {
+        this.x = x;
+        this.y = y;
+        this.a = a;
+        this.b = b;
+    }
+    show() {
+        fill(random(255), random(255), random(255));
+        stroke(51);
+        ellipse(this.x, this.y, this.a, this.b);
+    }
+}
+
+</script>
 </head>
- 
 <body>
- <center><H1 style="color:azure">Dungeons &amp; Dragons</H1>
- <H2 style="color:azure"><i>Let's hope the dice roll in your favor!</i></H2></center>
 </body>
 </html>
