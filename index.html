@@ -19,14 +19,18 @@ function draw() {
             if (x == height || x == 0) continue;
             lines.push(new Line(x, width/2, 0, 0));
             lines[i].show();
+            lines.slice(lines[i]);
             lines2.push(new Line(x, width/2, 0, height));
             lines2[i].show();
+            lines2.slice(lines[i]);
             lines3.push(new Line(x, width/2, height, height));
             lines3[i].show();
+            lines3.slice(lines[i]);
             lines4.push(new Line(x, width/2, height, 0));
             lines4[i].show();
+            lines4.slice(lines[i]);
             stroke(51);
-            bubbles.push(new Bubble(x, width / 2, 25, 25));
+            bubbles.push(new Bubble(x, width/2, 25, 25));
             bubbles[i].show();
 
             /*stroke(random(255), random(255), random(255));
