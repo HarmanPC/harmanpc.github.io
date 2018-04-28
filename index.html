@@ -12,8 +12,6 @@ var lines4 = [];
 function setup() {
     createCanvas(500, 500);
     background(51);
-}
-function draw() {
     for (var i = 0; i < 25; i++) {
         for (var x = 0; x < height;  x += 25) {
             if (x == height || x == 0) continue;
@@ -34,6 +32,9 @@ function draw() {
             frameRate(4);
         }
     }
+}
+function draw() {
+
 }
 class Line {
     constructor(x, y, x2, y2) {
