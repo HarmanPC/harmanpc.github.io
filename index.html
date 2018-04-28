@@ -32,7 +32,7 @@ function draw() {
             stroke(51);
             bubbles.push(new Bubble(x, width/2, 25, 25));
             bubbles[i].show();
-
+            bubbles.slice(bubbles[i]);
             /*stroke(random(255), random(255), random(255));
             line(width/2, 0, width/2, width);*/
             frameRate(4);
