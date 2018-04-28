@@ -1,20 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>P5.js Test</title>
+<title>Sketch</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.4/p5.min.js"></script>
 <script>
 var bubbles = [];
@@ -23,7 +10,7 @@ var lines2 = [];
 var lines3 = [];
 var lines4 = [];
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(windowWidth, windowHeight);
     background(51);
 }
 function draw() {
@@ -73,7 +60,6 @@ class Bubble {
         ellipse(this.x, this.y, this.a, this.b);
     }
 }
-
 </script>
 </head>
 <body>
