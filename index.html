@@ -14,23 +14,23 @@ function setup() {
     background(51);
 }
 function draw() {
-    for (var i = 0; i < height / 10; i++) {
-        for (var x = 0; x < height;  x += height / 10) {
+    for (var i = 0; i < windowHeight / 10; i++) {
+        for (var x = 0; x < windowHheight;  x += windowHeight / 10) {
             if (x == height || x == 0) continue;
-            lines.push(new Line(x, width/2, 0, 0));
+            lines.push(new Line(x, windowWidth/2, 0, 0));
             lines[i].show();
             lines.slice(lines[i]);
-            lines2.push(new Line(x, width/2, 0, height));
+            lines2.push(new Line(x, windowWidth/2, 0, windowheight));
             lines2[i].show();
             lines2.slice(lines[i]);
-            lines3.push(new Line(x, width/2, height, height));
+            lines3.push(new Line(x, windowWidth/2, windowHeight, windowHeight));
             lines3[i].show();
             lines3.slice(lines[i]);
-            lines4.push(new Line(x, width/2, height, 0));
+            lines4.push(new Line(x, windowWidth/2, windowHeight, 0));
             lines4[i].show();
             lines4.slice(lines[i]);
             stroke(51);
-            bubbles.push(new Bubble(x, width/2, 25, 25));
+            bubbles.push(new Bubble(x, windowWidth/2, 25, 25));
             bubbles[i].show();
             bubbles.slice(bubbles[i]);
             /*stroke(random(255), random(255), random(255));
