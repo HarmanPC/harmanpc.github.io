@@ -12,29 +12,35 @@ var lines4 = [];
 function setup() {
     createCanvas(500, 500);
     background(51);
+}
+function draw() {
+    Do();
+}
+function Do() {
     for (var i = 0; i < 25; i++) {
-        for (var x = 0; x < height;  x += 25) {
-            if (x == height || x == 0) continue;
-            lines.push(new Line(x, width/2, 0, 0));
+        for (var x = 0; x < 500;  x += 25) {
+            if (x == 500 || x == 0) continue;
+            lines.push(new Line(x, 250, 0, 0));
             lines[i].show();
-            lines2.push(new Line(x, width/2, 0, height));
+            lines2.push(new Line(x, 250, 0, 500));
             lines2[i].show();
-            lines3.push(new Line(x, width/2, height, height));
+            lines3.push(new Line(x, 250, 500, 500));
             lines3[i].show();
-            lines4.push(new Line(x, width/2, height, 0));
+            lines4.push(new Line(x, 250, 500, 0));
             lines4[i].show();
             stroke(51);
-            bubbles.push(new Bubble(x, width / 2, 25, 25));
+            bubbles.push(new Bubble(x, 250, 25, 25));
             bubbles[i].show();
-
             /*stroke(random(255), random(255), random(255));
-            line(width/2, 0, width/2, width);*/
+            line(500/2, 0, 500/2, 500);*/
             frameRate(4);
         }
     }
-}
-function draw() {
-
+    lines = [];
+    lines2 = [];
+    lines3 = [];
+    lines4 = [];
+    bubbles = [];
 }
 class Line {
     constructor(x, y, x2, y2) {
