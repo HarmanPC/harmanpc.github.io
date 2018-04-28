@@ -35,7 +35,7 @@ function Do() {
             stroke(51);
             bubbles.push(new Bubble(x, windowWidth/2, windowWidth / 10, windowWidth / 10));
             bubbles[i].show();
-            bubbles.splice(i, 1);
+            delete bubbles[i];
             /*stroke(random(255), random(255), random(255));
             line(width/2, 0, width/2, width);*/
             frameRate(4);
