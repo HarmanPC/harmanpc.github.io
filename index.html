@@ -31,8 +31,10 @@ function Do() {
             stroke(51);
             bubbles.push(new Bubble(x, width/2, 25, 25));
             bubbles[i].show();
-            /*stroke(random(255), random(255), random(255));
-            line(500/2, 0, 500/2, 500);*/
+            var top = new Bubble(width/2, 135, 25, 25);
+            top.show();
+            var bottom = new Bubble(width/2, width - 135, 25, 25);
+            bottom.show();
             frameRate(4);
         }
     }
@@ -55,16 +57,16 @@ class Line {
     }
 }
 class Bubble {
-    constructor(x, y, a, b) {
+    constructor(x, y, x2, y2) {
         this.x = x;
         this.y = y;
-        this.a = a;
-        this.b = b;
+        this.x2 = x2;
+        this.y2 = y2;
     }
     show() {
         fill(random(255), random(255), random(255));
         stroke(51);
-        ellipse(this.x, this.y, this.a, this.b);
+        ellipse(this.x, this.y, this.x2, this.y2);
     }
 }
 </script>
