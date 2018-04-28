@@ -14,8 +14,8 @@ function setup() {
     background(51);
 }
 function draw() {
-    for (var i = 0; i < 25; i++) {
-        for (var x = 0; x < height;  x += 25) {
+    for (var i = 0; i < height / 10; i++) {
+        for (var x = 0; x < height;  x += height / 10) {
             if (x == height || x == 0) continue;
             lines.push(new Line(x, width/2, 0, 0));
             lines[i].show();
