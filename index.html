@@ -14,25 +14,28 @@ function setup() {
     background(51);
 }
 function draw() {
+    Do();
+}
+function Do() {
     for (var i = 0; i < windowHeight / 10; i++) {
         for (var x = 0; x < windowHheight;  x += windowHeight / 10) {
             if (x == height || x == 0) continue;
             lines.push(new Line(x, windowWidth/2, 0, 0));
             lines[i].show();
-            lines.splice(lines[i], 1);
+            lines.splice(i, 1);
             lines2.push(new Line(x, windowWidth/2, 0, windowheight));
             lines2[i].show();
-            lines2.splice(lines[i], 1);
+            lines2.splice(i, 1);
             lines3.push(new Line(x, windowWidth/2, windowHeight, windowHeight));
             lines3[i].show();
-            lines3.splice(lines[i], 1);
+            lines3.splice(i, 1);
             lines4.push(new Line(x, windowWidth/2, windowHeight, 0));
             lines4[i].show();
-            lines4.splice(lines[i], 1);
+            lines4.splice(i, 1);
             stroke(51);
             bubbles.push(new Bubble(x, windowWidth/2, 25, 25));
             bubbles[i].show();
-            bubbles.splice(bubbles[i], 1);
+            bubbles.splice(i, 1);
             /*stroke(random(255), random(255), random(255));
             line(width/2, 0, width/2, width);*/
             frameRate(4);
