@@ -10,32 +10,25 @@ var lines2 = [];
 var lines3 = [];
 var lines4 = [];
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(500, 500);
     background(51);
 }
 function draw() {
-    Do();
-}
-function Do() {
-    for (var i = 0; i < windowHeight / 10; i++) {
-        for (var x = 0; x < windowHheight;  x += windowHeight / 10) {
+    for (var i = 0; i < 25; i++) {
+        for (var x = 0; x < height;  x += 25) {
             if (x == height || x == 0) continue;
-            lines.push(new Line(x, windowWidth/2, 0, 0));
+            lines.push(new Line(x, width/2, 0, 0));
             lines[i].show();
-            lines.splice(i, 1);
-            lines2.push(new Line(x, windowWidth/2, 0, windowheight));
+            lines2.push(new Line(x, width/2, 0, height));
             lines2[i].show();
-            lines2.splice(i, 1);
-            lines3.push(new Line(x, windowWidth/2, windowHeight, windowHeight));
+            lines3.push(new Line(x, width/2, height, height));
             lines3[i].show();
-            lines3.splice(i, 1);
-            lines4.push(new Line(x, windowWidth/2, windowHeight, 0));
+            lines4.push(new Line(x, width/2, height, 0));
             lines4[i].show();
-            lines4.splice(i, 1);
             stroke(51);
-            bubbles.push(new Bubble(x, windowWidth/2, windowWidth / 10, windowWidth / 10));
+            bubbles.push(new Bubble(x, width / 2, 25, 25));
             bubbles[i].show();
-            delete bubbles[i];
+
             /*stroke(random(255), random(255), random(255));
             line(width/2, 0, width/2, width);*/
             frameRate(4);
@@ -64,6 +57,7 @@ class Bubble {
     show() {
         fill(random(255), random(255), random(255));
         stroke(51);
+
         ellipse(this.x, this.y, this.a, this.b);
     }
 }
