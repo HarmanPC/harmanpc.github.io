@@ -19,7 +19,7 @@ function start() {
 }
 function draw() {
     if (started) {
-        stroke(51);
+        stroke(200);
         fill(200);
         ellipse(50, 50, 50, 50);
         fill(200);
@@ -29,7 +29,7 @@ function draw() {
             stars[i].show();
             x[i]++;
             y[i]++;
-            if ((x[i] === height || x[i] === width) && Max.indexOf(i) === -1) {
+            if ((x[i] === height || y[i] === width) && Max.indexOf(i) === -1) {
                 Max.push(i);
             }
             if (Max.length >= x.length) { // All stars fall
