@@ -28,7 +28,7 @@ function draw() {
         fill(200);
         stroke(50);
         for (let i = 0; i < STARS_LENGTH; i++) {
-            stars[i] = new Star(x[i], y[i], 15, 2, 8);
+            stars[i] = new Star(x[i], y[i], 12, 3, 8);
             stars[i].show();
             x[i]++;
             y[i]++;
