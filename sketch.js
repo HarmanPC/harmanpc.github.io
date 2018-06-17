@@ -20,7 +20,6 @@ function start() {
     }
 }
 function draw() {
-    if (started) {
         stroke(200);
         fill(200);
         ellipse(50, 50, 50, 50);
@@ -44,6 +43,5 @@ function draw() {
                 noLoop();
                 break;
             }
-        }
     }
   }
