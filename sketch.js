@@ -1,4 +1,3 @@
-let started = true;
 const x = [];
 const stars = [];
 const y = [];
